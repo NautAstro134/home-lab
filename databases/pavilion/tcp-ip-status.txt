@@ -1,0 +1,13 @@
+
+
+Enabled      : 1
+PSPath       : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL 
+               Server\MSSQL17.MSSQLSERVER\MSSQLServer\SuperSocketNetLib\Tcp
+PSParentPath : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL 
+               Server\MSSQL17.MSSQLSERVER\MSSQLServer\SuperSocketNetLib
+PSChildName  : Tcp
+PSDrive      : HKLM
+PSProvider   : Microsoft.PowerShell.Core\Registry
+
+
+
