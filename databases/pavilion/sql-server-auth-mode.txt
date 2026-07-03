@@ -1,0 +1,13 @@
+
+
+LoginMode    : 2
+PSPath       : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL 
+               Server\MSSQL17.MSSQLSERVER\MSSQLServer
+PSParentPath : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL 
+               Server\MSSQL17.MSSQLSERVER
+PSChildName  : MSSQLServer
+PSDrive      : HKLM
+PSProvider   : Microsoft.PowerShell.Core\Registry
+
+
+
