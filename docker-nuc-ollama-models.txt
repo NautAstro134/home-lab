@@ -1,0 +1,2 @@
+NAME             ID              SIZE      MODIFIED   
+llama3:latest    f55979a0f8c4    4.9 GB    7 days ago    
