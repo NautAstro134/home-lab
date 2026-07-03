@@ -1,0 +1,5 @@
+CONTAINER ID   IMAGE                    COMMAND               CREATED      STATUS       PORTS                                                             NAMES
+c9f84bab2919   portainer/portainer-ce   "/portainer"          4 days ago   Up 7 hours   8000/tcp, 9443/tcp, 0.0.0.0:9000->9000/tcp, [::]:9000->9000/tcp   relaxed_tu
+5058e65e562c   ollama/ollama            "/bin/ollama serve"   7 days ago   Up 7 hours   0.0.0.0:11434->11434/tcp, [::]:11434->11434/tcp                   ollama
+/relaxed_tu: RestartPolicy=always Mounts=[{bind  /var/run/docker.sock /var/run/docker.sock   true rprivate} {volume 959714961bd6507b344ffbd78ae2fb35434b3df84277cc7aeee8a6929ddc1b5a /var/lib/docker/volumes/959714961bd6507b344ffbd78ae2fb35434b3df84277cc7aeee8a6929ddc1b5a/_data /data local  true }]
+/ollama: RestartPolicy=always Mounts=[{bind  /home/ram2 /root   true rprivate}]
