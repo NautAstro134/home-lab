@@ -1,0 +1,6 @@
+
+DisplayName     Enabled Direction Action
+-----------     ------- --------- ------
+SQL Server 1433    True   Inbound  Allow
+
+
