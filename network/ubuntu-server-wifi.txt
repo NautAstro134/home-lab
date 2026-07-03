@@ -8,7 +8,7 @@ connection.autoconnect-priority:        0
 connection.autoconnect-retries:         -1 (default)
 connection.multi-connect:               0 (default)
 connection.auth-retries:                -1
-connection.timestamp:                   1783102016
+connection.timestamp:                   1783103493
 connection.permissions:                 --
 connection.zone:                        --
 connection.controller:                  --
@@ -73,7 +73,7 @@ ipv4.dns:                               8.8.8.8
 ipv4.dns-search:                        --
 ipv4.dns-options:                       --
 ipv4.dns-priority:                      0
-ipv4.addresses:                         192.168.1.121/24
+ipv4.addresses:                         --
 ipv4.gateway:                           --
 ipv4.routes:                            --
 ipv4.route-metric:                      -1
@@ -153,16 +153,14 @@ GENERAL.DEFAULT:                        yes
 GENERAL.DEFAULT6:                       no
 GENERAL.SPEC-OBJECT:                    /org/freedesktop/NetworkManager/AccessPoint/135
 GENERAL.VPN:                            no
-GENERAL.DBUS-PATH:                      /org/freedesktop/NetworkManager/ActiveConnection/3
+GENERAL.DBUS-PATH:                      /org/freedesktop/NetworkManager/ActiveConnection/4
 GENERAL.CON-PATH:                       /org/freedesktop/NetworkManager/Settings/3
 GENERAL.ZONE:                           --
 GENERAL.MASTER-PATH:                    --
 IP4.ADDRESS[1]:                         192.168.1.120/24
-IP4.ADDRESS[2]:                         192.168.1.121/24
 IP4.GATEWAY:                            192.168.1.1
 IP4.ROUTE[1]:                           dst = 192.168.1.0/24, nh = 0.0.0.0, mt = 600
-IP4.ROUTE[2]:                           dst = 192.168.1.0/24, nh = 0.0.0.0, mt = 600
-IP4.ROUTE[3]:                           dst = 0.0.0.0/0, nh = 192.168.1.1, mt = 20600
+IP4.ROUTE[2]:                           dst = 0.0.0.0/0, nh = 192.168.1.1, mt = 600
 IP4.DNS[1]:                             8.8.8.8
 IP4.DNS[2]:                             192.168.1.1
 IP4.DOMAIN[1]:                          lan
@@ -194,7 +192,7 @@ DHCP4.OPTION[25]:                       requested_time_offset = 1
 DHCP4.OPTION[26]:                       requested_wpad = 1
 DHCP4.OPTION[27]:                       routers = 192.168.1.1
 DHCP4.OPTION[28]:                       subnet_mask = 255.255.255.0
-IP6.ADDRESS[1]:                         fd1e:38f7:5fbc:0:e66d:f5e1:3fe6:2c19/64
+IP6.ADDRESS[1]:                         fd1e:38f7:5fbc:0:21b3:f16e:2c5c:5d10/64
 IP6.ADDRESS[2]:                         fd1e:38f7:5fbc::90c/128
 IP6.ADDRESS[3]:                         fd1e:38f7:5fbc:0:1a79:7c4d:3498:7145/64
 IP6.ADDRESS[4]:                         fe80::bcda:d1bd:3e13:1896/64
