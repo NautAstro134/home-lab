@@ -10,7 +10,7 @@ and building a freelance/consulting portfolio.
 | Sleekbook        | Client/control    | Ubuntu        | 192.168.1.130  | roustam |
 | NUC               | Server (Postgres) | Alpine Linux  | 192.168.1.121  | ram2    |
 | Ubuntu server     | Server (Postgres) | Ubuntu        | 192.168.1.120  | ram2    |
-| HP Pavilion       | SQL Server        | Windows 10    | 192.168.1.235  | ram2    |
+| HP Pavilion       | SQL Server        | Windows 10    | 192.168.1.235  | ram1    |
 | Acer              | Misc              | antiX Linux   | 192.168.1.157  | ram     |
 
 ## Network
