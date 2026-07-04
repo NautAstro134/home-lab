@@ -48,7 +48,7 @@ Connected databases: Ubuntu Server (labdb), NUC (labdb), Pavilion (Northwind)
 
 ## TODO
 
-- [ ] Verify `dbt debug --target dev` on Ubuntu server
+- [x] Verify `dbt debug --target dev` on Ubuntu server — confirmed working 2026-07-04
 - [ ] Add actual config files (network, postgres, systemd units) to their folders
 - [ ] Confirm battery-guard.timer bug
 
