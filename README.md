@@ -51,3 +51,14 @@ Connected databases: Ubuntu Server (labdb), NUC (labdb), Pavilion (Northwind)
 - [ ] Verify `dbt debug --target dev` on Ubuntu server
 - [ ] Add actual config files (network, postgres, systemd units) to their folders
 - [ ] Confirm battery-guard.timer bug
+
+## Update (2026-07-04): BAT1 directory bug resolved
+
+The "terminal opens in wrong directory" issue was NOT caused by
+battery-guard.timer. Root cause: the terminal uses VTE's OSC 7 directory
+tracking (/etc/profile.d/vte-2.91.sh), which remembers the last `cd`
+location across sessions. At some point BAT1 was checked manually via
+`cd /sys/class/power_supply/BAT1`, and the terminal kept reopening there.
+
+Fix: cd to a normal directory once (e.g. `cd ~`), open a new terminal
+tab to confirm it sticks.
