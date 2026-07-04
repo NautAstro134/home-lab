@@ -1,0 +1,4 @@
+alias ai='docker exec -it ollama ollama run llama3'
+alias ai='docker exec -it ollama ollama run llama3'
+alias ai='docker exec -it ollama ollama run llama3'
+alias shutdown="doas poweroff"
