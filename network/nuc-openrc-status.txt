@@ -1,0 +1,16 @@
+Runlevel: default
+ postgresql                                                        [  started  ]
+ mini_httpd                                                        [  started  ]
+ acpid                                                             [  started  ]
+ docker                                                [  started 23:17:54 (0) ]
+ sshd                                                              [  started  ]
+ ntpd                                                              [  started  ]
+ crond                                                             [  started  ]
+Dynamic Runlevel: hotplugged
+Dynamic Runlevel: needed/wanted
+ sysfs                                                             [  started  ]
+ cgroups                                                           [  started  ]
+ fsck                                                              [  started  ]
+ root                                                              [  started  ]
+ localmount                                                        [  started  ]
+Dynamic Runlevel: manual
