@@ -13,3 +13,10 @@ http://localhost:3000) has these databases configured:
 Connection passwords are stored encrypted in Metabase's internal H2
 database (~/metabase/metabase.db.mv.db) and are not human-readable;
 not included in this repo.
+
+## Update (2026-07-04): Duplicate removed
+
+Confirmed both Pavilion - Northwind entries had identical settings
+(host, port, database). Removed the duplicate (ID 5) via Admin >
+Databases. Four connections remain: NUC, Pavilion, Ubuntu Server,
+Sample Database.
