@@ -1,0 +1,21 @@
+UNIT FILE                           STATE  PRESET
+alsa-utils.service                  masked enabled
+cryptdisks-early.service            masked enabled
+cryptdisks.service                  masked enabled
+hwclock.service                     masked enabled
+NetworkManager-wait-online.service  masked enabled
+plymouth-log.service                masked enabled
+plymouth-quit-wait.service          masked enabled
+plymouth-read-write.service         masked enabled
+plymouth-start.service              masked enabled
+pulseaudio-enable-autospawn.service masked enabled
+saned.service                       masked enabled
+screen-cleanup.service              masked enabled
+sudo.service                        masked enabled
+x11-common.service                  masked enabled
+hibernate.target                    masked enabled
+hybrid-sleep.target                 masked enabled
+sleep.target                        masked enabled
+suspend.target                      masked enabled
+
+18 unit files listed.

@@ -1,0 +1,17 @@
+[Unit]
+Description=Battery Guard Timer
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=2min
+
+[Install]
+WantedBy=timers.target
+
+[Unit]
+Description=Battery Guard
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/battery-guard.sh
+
