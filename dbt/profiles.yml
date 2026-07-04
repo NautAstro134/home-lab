@@ -1,0 +1,32 @@
+sales_project:
+  outputs:
+    dev:
+      dbname: labdb
+      host: 192.168.1.120
+      pass: "REDACTED"
+      port: 5432
+      schema: public
+      threads: 1
+      type: postgres
+      user: ram2
+    nuc:
+      dbname: labdb
+      host: 192.168.1.121
+      pass: "REDACTED"
+      port: 5432
+      schema: public
+      threads: 1
+      type: postgres
+      user: ram2
+    sqlserver:
+      database: Northwind
+      driver: "ODBC Driver 18 for SQL Server"
+      password: "REDACTED"
+      port: 1433
+      schema: dbo
+      server: 192.168.1.235
+      threads: 1
+      type: sqlserver
+      user: ram2
+      TrustServerCertificate: yes
+  target: dev
