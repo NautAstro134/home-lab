@@ -62,3 +62,6 @@ location across sessions. At some point BAT1 was checked manually via
 
 Fix: cd to a normal directory once (e.g. `cd ~`), open a new terminal
 tab to confirm it sticks.
+
+**Verified fixed (2026-07-04):** opened a new terminal after `cd ~`,
+it landed in `~` as expected. Bug fully resolved.
