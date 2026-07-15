@@ -9,6 +9,7 @@ Linux/SQL practice and remote access to lab servers.
 - Termux (F-Droid) + Alpine Linux via illvart/termux-alpine
 - Alias: alias alpine="termux-alpine" in ~/.bashrc
 
+
 ## Installed packages
 bash, nano, vim, curl, wget, git, openssh, htop, tree, man-pages, mandoc,
 tmux, freetds (tsql), postgresql-client (psql), python3, py3-pip,
@@ -29,3 +30,67 @@ Repo cloned and configured directly on this device (2026-07-08).
 Personal access token generated in-device via GitHub Settings > Tokens,
 scope "repo". Credential caching enabled: git config --global
 credential.helper store
+## SSH Targets
+
+Ubuntu Client
+
+```bash
+ssh roustam@192.168.1.130
+```
+
+Intel NUC
+
+```bash
+ssh ram2@192.168.1.121
+```
+
+Intel PostgreSQL Server
+
+```bash
+ssh <username>@192.168.1.120
+```
+
+---
+
+## Web Interfaces
+
+code-server
+
+http://192.168.1.121:8080
+
+Portainer
+
+http://192.168.1.121:9000
+
+Ollama API
+
+http://192.168.1.121:11434
+
+---
+
+## AI Development
+
+Neovim on the Ubuntu client is configured to use the Ollama server
+running on the Intel NUC.
+
+Workflow:
+
+Kindle Fire
+→ Termux
+→ SSH
+→ Ubuntu Client
+→ Neovim
+→ CodeCompanion
+→ Ollama (Intel NUC)
+
+---
+
+## Git Workflow
+
+```bash
+git pull
+git status
+git add .
+git commit -m "message"
+git push
+```
