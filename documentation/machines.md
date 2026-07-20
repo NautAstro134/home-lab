@@ -1,6 +1,6 @@
 # Home Lab Machines
 
-## Ubuntu Client
+## Ubuntu Server Notebook
 
 Hostname:
 ram2-HP-ENVY-m6-Notebook-PC
@@ -15,13 +15,23 @@ User:
 ram2
 
 Purpose:
-- Main workstation
-- Neovim
 - VS Code
 - Continue AI client
-- PostgreSQL client tools
+- Neovim
+- CodeCompanion
+- Development workstation
+
+
+## Ubuntu Client Sleekbook
+
+IP:
+192.168.1.130
+
+Purpose:
+- PostgreSQL client
 - dbt
 - Metabase
+- Data engineering workstation
 
 
 ## Intel NUC Server
@@ -50,6 +60,8 @@ Purpose:
 Hostname:
 terryza
 
+IP:
+192.168.1.1
+
 Purpose:
 - Network gateway/router
-- LAN management

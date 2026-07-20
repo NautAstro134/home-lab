@@ -10,40 +10,37 @@ Subnet:
 
 | Machine | IP | User | OS |
 |---|---|---|---|
-| Ubuntu Client | 192.168.1.120 | ram2 | Ubuntu 26.04 |
-| Intel NUC | 192.168.1.121 | ram2 | Alpine Linux |
-| Router | 192.168.1.1 | - | OpenWrt |
+| Ubuntu Server Notebook | 192.168.1.120 | ram2 | Ubuntu 26.04 |
+| Ubuntu Client Sleekbook | 192.168.1.130 | ram2 | Ubuntu |
+| Intel NUC Server | 192.168.1.121 | ram2 | Alpine Linux |
+| OpenWrt Gateway | 192.168.1.1 | - | OpenWrt |
 
 
 ## SSH Access
 
-Ubuntu → NUC:
+Ubuntu Server Notebook → NUC:
 
 ssh ram2@192.168.1.121
 
 
-Ubuntu machine:
+## Services
 
-hostname:
-ram2-HP-ENVY-m6-Notebook-PC
+Ubuntu Server Notebook:
+- VS Code
+- Continue
+- Neovim
+- CodeCompanion
 
-IP:
-192.168.1.120
-
-
-NUC:
-
-hostname:
-nuc
-
-IP:
-192.168.1.121
+Intel NUC:
+- Ollama API
+- llama3:latest
 
 
 ## Notes
 
 Do not store passwords or private keys in Git.
 
-SSH authentication uses:
+Use:
 - SSH keys
-- GitHub token for HTTPS Git operations
+- GitHub Personal Access Tokens
+for authentication.
