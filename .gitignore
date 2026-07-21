@@ -1,0 +1,12 @@
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# dbt generated files
+logs/
+target/
+
+# Python cache
+__pycache__/
+*.pyc
