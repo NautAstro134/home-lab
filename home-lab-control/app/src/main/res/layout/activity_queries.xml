@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UNIVERSAL QUERY BUILDER"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="API Server" />
+
+        <EditText
+            android:id="@+id/editApiServer"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="http://server:5000"
+            android:inputType="textUri"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/buttonConnectApi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CONNECT" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Metric" />
+
+        <Spinner
+            android:id="@+id/spinnerMetric"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Group by" />
+
+        <Spinner
+            android:id="@+id/spinnerGroupBy"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rep" />
+
+        <Spinner
+            android:id="@+id/spinnerRep"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product" />
+
+        <Spinner
+            android:id="@+id/spinnerProduct"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Region" />
+
+        <Spinner
+            android:id="@+id/spinnerRegion"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discount" />
+
+        <Spinner
+            android:id="@+id/spinnerDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start date" />
+
+        <EditText
+            android:id="@+id/editStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="YYYY-MM-DD"
+            android:inputType="date" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End date" />
+
+        <EditText
+            android:id="@+id/editEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:hint="YYYY-MM-DD"
+            android:inputType="date" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sort" />
+
+        <Spinner
+            android:id="@+id/spinnerSort"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of Results" />
+
+        <Spinner
+            android:id="@+id/spinnerLimit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/buttonRunQuery"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:text="RUN QUERY"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/queryResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Query result will appear here"
+            android:textSize="18sp"
+            android:paddingBottom="32dp" />
+
+    </LinearLayout>
+
+</ScrollView>

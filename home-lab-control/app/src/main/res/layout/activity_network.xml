@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IPs / NETWORK"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TERRYZA"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/terryzaInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IP: detecting...\nStatus: checking...\nAddress type: checking..."
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LINKSYS"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/linksysInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IP: detecting...\nStatus: checking...\nAddress type: checking..."
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/buttonScan"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="SCAN NETWORK"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</ScrollView>
