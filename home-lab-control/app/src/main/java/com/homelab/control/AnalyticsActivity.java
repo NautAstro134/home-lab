@@ -12,7 +12,13 @@ public class AnalyticsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analytics);
 
+        Button retailSalesButton = findViewById(R.id.buttonRetailSales);
         Button queriesButton = findViewById(R.id.buttonQueries);
+
+        retailSalesButton.setOnClickListener(v -> {
+            Intent intent = new Intent(AnalyticsActivity.this, RetailSalesActivity.class);
+            startActivity(intent);
+        });
 
         queriesButton.setOnClickListener(v -> {
             Intent intent = new Intent(AnalyticsActivity.this, QueriesActivity.class);

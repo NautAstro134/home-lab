@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RETAIL SALES"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/buttonTotalRevenue"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="TOTAL REVENUE"
+        android:textSize="18sp"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/buttonItemsSold"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="ITEMS SOLD"
+        android:textSize="18sp"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/buttonOrders"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="NUMBER OF ORDERS"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/textRetailResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose a retail sales query"
+        android:textSize="17sp"
+        android:padding="12dp" />
+
+</LinearLayout>

@@ -16,6 +16,7 @@
         <activity android:name=".OpenWrtActivity" />
         <activity android:name=".AnalyticsActivity" />
         <activity android:name=".QueriesActivity" />
+        <activity android:name=".RetailSalesActivity" />
 
         <activity
             android:name=".MainActivity"
