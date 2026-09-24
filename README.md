@@ -1,67 +1,118 @@
 # Home Data Engineering Lab
 
-Personal home lab for learning data engineering (Linux, SQL, dbt, Metabase, Python)
-and building a freelance/consulting portfolio.
+Personal home lab for business analytics, data engineering, databases, AI-assisted development, and portfolio projects.
 
-## Machines
+## Current Architecture
 
-| Name             | Role              | OS            | IP             | User    |
-|------------------|-------------------|---------------|----------------|---------|
-| Sleekbook        | Client/control    | Ubuntu        | 192.168.1.130  | roustam |
-| NUC               | Server (Postgres) | Alpine Linux  | 192.168.1.121  | ram2    |
-| Ubuntu server     | Server (Postgres) | Ubuntu        | 192.168.1.120  | ram2    |
-| HP Pavilion       | SQL Server        | Windows 10    | 192.168.1.235  | ram1    |
-| Acer              | Misc              | antiX Linux   | 192.168.1.157  | ram     |
+Terryza is the primary 24/7 server and network gateway. The Intel NUC has been retired from normal server duty and remains in the lab for future local-AI use.
+
+| Machine | Role | OS | Address |
+|---|---|---|---|
+| Terryza | 24/7 server, gateway, PostgreSQL, cloud storage | OpenWrt 24.10.5 | LAN 192.168.1.1 / Tailscale 100.83.143.71 |
+| Windows Pavilion | Analytics and Windows workstation | Windows 10 | Tailscale 100.68.49.62 |
+| Ubuntu Server Notebook | Development workstation | Ubuntu 26.04 LTS | 192.168.1.120 |
+| Ubuntu Sleekbook | Data engineering client | Ubuntu | 192.168.1.130 |
+| Intel NUC | Standby / future local AI | Alpine Linux | 192.168.1.121 |
+
+## Terryza Cloud
+
+Terryza provides remote access through Tailscale.
+
+Services:
+- PostgreSQL 15
+- TerryzaCloud SMB file storage
+- Tailscale remote access
+- OpenWrt routing/firewall
+- WAN through USB phone tethering
+
+Remote/cloud address:
+100.83.143.71
+
+Windows maps the TerryzaCloud SMB share as drive Z:.
+
+## PostgreSQL
+
+Primary PostgreSQL server: Terryza
+
+LAN endpoint:
+192.168.1.1:5432
+
+Tailscale/cloud endpoint:
+100.83.143.71:5432
+
+Current migrated project databases:
+- labdb
+- business_operations
+
+Remote PostgreSQL connectivity from Windows was verified successfully over Tailscale from a separate Internet connection.
+
+The Intel NUC previously hosted these databases and is no longer required for normal database service.
+
+## Windows Pavilion
+
+Primary Windows analytics workstation.
+
+Installed tools include:
+- Power BI Desktop
+- Python 3.13.13
+- Node.js 24.12.0
+- Git
+- GitHub CLI
+- uv
+- 7-Zip
+- jq
+- ripgrep
+- Tailscale
+
+Windows also hosts SQL Server with the Northwind database.
+
+TerryzaCloud mapping:
+Z: -> \\100.83.143.71\TerryzaCloud
+
+## Data and Analytics Stack
+
+Current and previous lab work includes:
+- PostgreSQL
+- SQL Server
+- SQLite
+- dbt
+- Power BI
+- Metabase
+- Python
+- Flask analytics APIs
+- pgAdmin
+- Git and GitHub
+- AI-assisted development tools
 
 ## Network
 
-- Router: Terryza AK3V (OpenWrt 24.10.5), gateway 192.168.1.1, WAN via phone tether (usb0)
-- Dumb AP: Linksys WRT160N (DD-WRT), 192.168.1.2
-- Static DHCP leases assigned for all lab MACs in LuCI
+LAN subnet:
+192.168.1.0/24
 
-## Databases
+Terryza:
+192.168.1.1
 
-- **NUC** — PostgreSQL 18.4 (native), Docker runs Portainer + Ollama
-- **Ubuntu server** — PostgreSQL 18, database `labdb`
-- **HP Pavilion** — SQL Server 17.0, database `Northwind`
+Linksys DD-WRT access point:
+192.168.1.2
 
-Credential standard: one username/password across all lab databases (not stored in this repo).
+Remote access uses Tailscale rather than exposing PostgreSQL or SMB directly to the public Internet.
 
-## dbt
+## Intel NUC
 
-Project: `~/sales_project` on Sleekbook (venv: `~/dbt-env`)
-Targets in `~/.dbt/profiles.yml`:
-- `dev` → Ubuntu server (.120), default
-- `nuc` → NUC (.121), verified working
+The Intel NUC previously served as the main PostgreSQL and home-lab server.
 
-## Metabase
+Current status:
+- labdb migrated to Terryza
+- business_operations migrated to Terryza
+- Flask analytics API not running at shutdown
+- Metabase not running at shutdown
+- Powered down for normal server duties
+- Retained for future local AI use and planned RAM upgrade
 
-Runs on Sleekbook: `~/metabase/metabase.jar`, started manually each session via
-`cd ~/metabase && java -jar metabase.jar` → http://localhost:3000
+## Security
 
-Connected databases: Ubuntu Server (labdb), NUC (labdb), Pavilion (Northwind)
+Passwords, private keys, database credentials, and authentication tokens are not stored in this repository.
 
-## Known issues
+## Documentation
 
-- Terminal sometimes opens in wrong directory after reboot on Sleekbook — suspected
-  cause: `battery-guard.timer`. Not yet confirmed.
-
-## TODO
-
-- [x] Verify `dbt debug --target dev` on Ubuntu server — confirmed working 2026-07-04
-- [ ] Add actual config files (network, postgres, systemd units) to their folders
-- [ ] Confirm battery-guard.timer bug
-
-## Update (2026-07-04): BAT1 directory bug resolved
-
-The "terminal opens in wrong directory" issue was NOT caused by
-battery-guard.timer. Root cause: the terminal uses VTE's OSC 7 directory
-tracking (/etc/profile.d/vte-2.91.sh), which remembers the last `cd`
-location across sessions. At some point BAT1 was checked manually via
-`cd /sys/class/power_supply/BAT1`, and the terminal kept reopening there.
-
-Fix: cd to a normal directory once (e.g. `cd ~`), open a new terminal
-tab to confirm it sticks.
-
-**Verified fixed (2026-07-04):** opened a new terminal after `cd ~`,
-it landed in `~` as expected. Bug fully resolved.
+See the documentation directory for detailed machine, network, database, dbt, and AI-stack information.
